@@ -16,6 +16,9 @@ def main():
     range_df = range_df.reset_index(drop=True)
     st.table(range_df)
 
+    st.subheader("거래량 변동 차트")
+    st.line_chart(range_df.set_index('Date')['Volume'])
+
 
 if __name__ == '__main__':
     main()
