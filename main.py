@@ -18,6 +18,8 @@ def main():
 
     st.subheader("주가 변동 차트")
     st.line_chart(range_df.set_index('Date')['Close'])
+    st.subheader("거래량 변동 차트")
+    st.line_chart(range_df.set_index('Date')['Volume'])
 
 
 if __name__ == '__main__':
